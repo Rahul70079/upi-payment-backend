@@ -170,6 +170,34 @@ npm run dev
 
 <hr>
 
+<h2>📬 Postman Integration (Automated Testing)</h2>
+
+<ol>
+  <li>Open Postman</li>
+  <li>Click on <b>Import</b></li>
+  <li>Select <code>postman_collection.json</code></li>
+  <li>Open the <b>Authentication</b> folder</li>
+  <li>Run the <b>Login User</b> request</li>
+</ol>
+
+<p>
+After login, the JWT token is automatically captured and stored in the environment as <code>{{token}}</code>.
+</p>
+
+<p>
+This allows you to directly test all protected routes without manually adding the Bearer token each time.
+</p>
+
+<ul>
+  <li>💰 Add Money</li>
+  <li>💸 Send Money</li>
+  <li>📱 Pay Bills</li>
+</ul>
+
+<p>
+✅ Postman automatically handles authentication for all requests.
+</p>
+
 
 </body>
 </html>
