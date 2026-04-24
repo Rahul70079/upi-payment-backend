@@ -1,0 +1,17 @@
+{
+  "name": "upi-payment-api",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "phonepe",
+    "rahul"
+  ],
+  "license": "ISC",
+  "author": "rahul",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
