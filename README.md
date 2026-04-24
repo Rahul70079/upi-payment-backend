@@ -61,10 +61,10 @@ JWT_SECRET=your_secret_key
 
 <p><b>Sample Users:</b></p>
 <ul>
-  <li>rahul@example.com (UPI: rahul178@payflow | Balance: 5000)</li>
-  <li>priyanshu@example.com (UPI: priyanshu567@payflow | Balance: 3000)</li>
-  <li>rahul@example.com (UPI: rahul789@payflow | Balance: 1500)</li>
-  <li>mohit@example.com (UPI: mohit012@payflow | Balance: 8000)</li>
+  <li>rahul@example.com (UPI: rahul178@payflow | Balance: 500)</li>
+  <li>priyanshu@example.com (UPI: priyanshu567@payflow | Balance: 200)</li>
+  <li>rahul@example.com (UPI: rahul789@payflow | Balance: 100)</li>
+  <li>mohit@example.com (UPI: mohit012@payflow | Balance: 450)</li>
 </ul>
 
 <p><b>Default Credentials:</b></p>
