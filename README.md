@@ -1,202 +1,177 @@
-# UPI Payment Backend (MERN)
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>UPI Payment Backend</title>
+</head>
+<body>
 
-A secure backend system for handling UPI-based peer-to-peer transactions. 
+<h1>💳 UPI Payment Backend (MERN)</h1>
+
+<p>
+A secure backend system for handling UPI-based peer-to-peer transactions.<br>
 Includes authentication, wallet management, and transaction processing APIs.
+</p>
 
+<hr>
 
-## 🌟 Full Feature Set
+<h2>🌟 Features</h2>
+<ul>
+  <li>🔐 <b>User Authentication</b> – JWT-based secure login & registration</li>
+  <li>🆔 <b>Dynamic UPI IDs</b> – Unique UPI ID for each user (e.g., user@payflow)</li>
+  <li>🔑 <b>MPIN Security</b> – 4-digit MPIN verification (bcrypt hashed)</li>
+  <li>💸 <b>Peer-to-Peer Transfers</b> – Send money via phone number or UPI ID</li>
+  <li>💰 <b>Wallet Top-Up</b> – Add funds using API</li>
+  <li>📱 <b>Utility Payments</b> – Mobile recharge & electricity bill APIs</li>
+  <li>📊 <b>Transaction History</b> – Complete record of all transactions</li>
+  <li>📄 <b>Swagger Docs</b> – Interactive API documentation</li>
+  <li>📬 <b>Postman Collection</b> – Pre-configured API testing setup</li>
+</ul>
 
-- 🔐 **User Authentication**  
-  Secure JWT-based registration and login system  
+<hr>
 
-- 🆔 **Dynamic UPI IDs**  
-  Automatically generates a unique UPI ID for each user (e.g., user@payflow)  
+<h2>🛠️ Tech Stack</h2>
+<ul>
+  <li><b>Node.js + Express.js</b> – Backend framework</li>
+  <li><b>MongoDB + Mongoose</b> – Database & ORM</li>
+  <li><b>bcryptjs</b> – Password & MPIN hashing</li>
+  <li><b>JWT (JSON Web Token)</b> – Authentication</li>
+  <li><b>Swagger UI</b> – API documentation</li>
+</ul>
 
-- 🔑 **MPIN Security**  
-  All transactions require a secure 4-digit MPIN verification (bcrypt hashed)  
+<hr>
 
-- 💸 **Peer-to-Peer Transfers**  
-  Send money using:
-  - 10-digit phone number  
-  - UPI ID  
+<h2>🚀 Getting Started</h2>
 
-- 💰 **Wallet Top-Up**  
-  Simulate adding funds to user wallet via a top-up API  
+<h3>1. Install Dependencies</h3>
+<pre>npm install</pre>
 
-- 📱 **Utility Bill Payments**  
-  Mock APIs for mobile recharge and electricity bill payments with proper transaction logging  
-
-- 📊 **Transaction History**  
-  View complete history of transfers, deposits, and bill payments  
-
-- 📄 **Swagger API Docs**  
-  Interactive API documentation for testing endpoints  
-
-- 📬 **Postman Collection**  
-  Ready-to-use Postman setup with environment configuration
-
-   ## 🛠️ Tech Stack
-
-- **Node.js + Express.js** – Backend framework  
-- **MongoDB + Mongoose** – Database and ORM  
-- **bcryptjs** – Password & MPIN hashing  
-- **JWT (JSON Web Token)** – Authentication & session management  
-- **Swagger UI** – API documentation
-
-  ## 🚀 Getting Started
-
-### 1️⃣ Install Dependencies
-Run the following command in the root directory:
-
-```bash
-npm install
-
-2️⃣ Configure Environment Variables
-
-Create a .env file in the root folder and add:
+<h3>2. Configure Environment Variables</h3>
+<pre>
 PORT=3000
 MONGO_URI=mongodb://127.0.0.1:27017/upi-payment-backend
 JWT_SECRET=your_secret_key
+</pre>
 
-3️⃣ Generate Swagger Docs
-Refresh the static UI configurations mapping to your local ports by executing:
-npm run swagger
+<h3>3. Generate Swagger Docs</h3>
+<pre>npm run swagger</pre>
 
-4️⃣ Seed Dummy Data (Optional)
-We recommend loading our starter pack database so you don't have to repeatedly register fake accounts! Run:
-npm run seed
+<h3>4. Seed Dummy Data (Optional)</h3>
+<pre>npm run seed</pre>
 
-Sample Users:
+<p><b>Sample Users:</b></p>
+<ul>
+  <li>rahul@example.com (UPI: rahul178@payflow | Balance: 5000)</li>
+  <li>priyanshu@example.com (UPI: priyanshu567@payflow | Balance: 3000)</li>
+  <li>rahul@example.com (UPI: rahul789@payflow | Balance: 1500)</li>
+  <li>mohit@example.com (UPI: mohit012@payflow | Balance: 8000)</li>
+</ul>
 
-amit@example.com
- (UPI: amit123@payflow | Balance: 5000)
-priya@example.com
- (UPI: priya456@payflow | Balance: 3000)
-rahul@example.com
- (UPI: rahul789@payflow | Balance: 1500)
-neha@example.com
- (UPI: neha012@payflow | Balance: 8000)
+<p><b>Default Credentials:</b></p>
+<ul>
+  <li>Password: password123</li>
+  <li>MPIN: 1234</li>
+</ul>
 
-Default Credentials:
-
-Password: password123
-MPIN: 1234
-
-5️⃣ Run the Server
+<h3>5. Run the Server</h3>
+<pre>
 # Production
 npm start
 
-# Development (auto-reload)
+# Development
 npm run dev
+</pre>
 
-Server will run at:
-👉 http://localhost:3000
+<p>Server runs at: <b>http://localhost:3000</b></p>
 
-## 📖 API Endpoints Summary
+<hr>
 
-### 🔐 Auth Routes (`/api/auth`)
+<h2>📖 API Endpoints</h2>
 
-- **POST `/register`**  
-  Register a new user and generate a unique UPI ID  
+<h3>🔐 Auth Routes (/api/auth)</h3>
+<ul>
+  <li><b>POST /register</b> – Register user</li>
+  <li><b>POST /login</b> – Login & get JWT token</li>
+  <li><b>GET /profile</b> – Get user details (requires token)</li>
+  <li><b>POST /setup-mpin</b> – Set MPIN (requires token)</li>
+</ul>
 
-- **POST `/login`**  
-  Authenticate user and return a JWT token  
+<h3>💸 Transaction Routes (/api/transactions)</h3>
+<ul>
+  <li><b>POST /send</b> – Send money (requires token)</li>
+</ul>
 
-- **GET `/profile`**  
-  Fetch authenticated user details and MPIN status *(requires token)*  
+<pre>
+{
+  "receiverIdentifier": "phone_or_upi",
+  "amount": 1000,
+  "mpin": "1234"
+}
+</pre>
 
-- **POST `/setup-mpin`**  
-  Set or update a secure 4-digit MPIN *(requires token)*
+<ul>
+  <li><b>GET /history</b> – Get transaction history (requires token)</li>
+</ul>
 
-### 💸 Transaction & P2P Routes (`/api/transactions`)
+<h3>💰 Wallet Routes (/api/wallet)</h3>
+<ul>
+  <li><b>POST /add-money</b> – Add money (requires token)</li>
+</ul>
 
-- **POST `/send`**  
-  Transfer money to another user using:
-  - Phone number  
-  - UPI ID  
-  *(requires token)*  
-
-  **Request Body:**
-  ```json
-  {
-    "receiverIdentifier": "phone_or_upi",
-    "amount": 1000,
-    "mpin": "1234"
-  }
-
-GET /history
-Retrieve complete transaction history including transfers and bill payments
-(requires token)
-
-### 💸 Transaction & P2P Routes (`/api/transactions`)
-
-- **POST `/send`**  
-  Transfer money to another user using:
-  - Phone number  
-  - UPI ID  
-  *(requires token)*  
-
-  **Request Body:**
-  ```json
-  {
-    "receiverIdentifier": "phone_or_upi",
-    "amount": 1000,
-    "mpin": "1234"
-  }
-
-GET /history
-Retrieve complete transaction history including transfers and bill payments
-(requires token)
-
-Wallet & Utility Routes (/api/wallet)
-
-POST /add-money
-Add funds to the user’s wallet
-(requires token)
-
-Request Body:
+<pre>
 {
   "amount": 1000
 }
+</pre>
 
-POST /pay-bill
-Pay utility bills like mobile recharge or electricity
-(requires token)
+<ul>
+  <li><b>POST /pay-bill</b> – Pay utility bills (requires token)</li>
+</ul>
 
-Request Body:
+<pre>
 {
   "billerName": "electricity",
   "amount": 500,
   "mpin": "1234"
 }
+</pre>
 
-## 🔍 Interacting with the API
+<hr>
 
-### 📄 Swagger Documentation
+<h2>🔍 API Usage</h2>
 
-Access the interactive API docs at:
-👉 http://localhost:5000/api-docs  
+<h3>📄 Swagger Docs</h3>
+<p>http://localhost:3000/api-docs</p>
 
-Use Swagger UI to:
-- View all available endpoints  
-- Check request/response formats  
-- Test APIs directly from the browser  
+<h3>📬 Postman Setup</h3>
+<ol>
+  <li>Open Postman</li>
+  <li>Import <code>postman_collection.json</code></li>
+  <li>Run Login API</li>
+</ol>
 
----
+<p>Token auto-saved as <code>{{token}}</code></p>
 
-### 📬 Postman Setup (Automated Testing)
+<ul>
+  <li>Add Money</li>
+  <li>Send Money</li>
+  <li>Pay Bills</li>
+</ul>
 
-1. Open Postman  
-2. Click **Import**  
-3. Select `postman_collection.json`  
-4. Open the **Authentication** folder  
-5. Run the **Login User** request  
+<hr>
 
-✅ After login, the JWT token is automatically saved in the environment as `{{token}}`  
+<h2>🚀 Future Enhancements</h2>
+<ul>
+  <li>OTP verification</li>
+  <li>Transaction rollback</li>
+  <li>Rate limiting</li>
+  <li>Email/SMS notifications</li>
+</ul>
 
-👉 You can now directly test:
-- Add Money  
-- Send Money  
-- Pay Bills  
+<hr>
 
-No need to manually set the Bearer token each time.
+<h2>👨‍💻 Author</h2>
+<p><b>Rahul Kumar</b></p>
+
+</body>
+</html>
