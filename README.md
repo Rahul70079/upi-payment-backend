@@ -170,8 +170,6 @@ npm run dev
 
 <hr>
 
-<h2>👨‍💻 Author</h2>
-<p><b>Rahul Kumar</b></p>
 
 </body>
 </html>
