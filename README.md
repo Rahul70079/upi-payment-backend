@@ -33,4 +33,12 @@ Includes authentication, wallet management, and transaction processing APIs.
   Interactive API documentation for testing endpoints  
 
 - 📬 **Postman Collection**  
-  Ready-to-use Postman setup with environment configuration  
+  Ready-to-use Postman setup with environment configuration
+
+   ## 🛠️ Tech Stack
+
+- **Node.js + Express.js** – Backend framework  
+- **MongoDB + Mongoose** – Database and ORM  
+- **bcryptjs** – Password & MPIN hashing  
+- **JWT (JSON Web Token)** – Authentication & session management  
+- **Swagger UI** – API documentation  
